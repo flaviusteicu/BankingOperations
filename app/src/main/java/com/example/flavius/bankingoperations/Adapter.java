@@ -18,7 +18,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
     ArrayList<BankAccounts> accounts;
 
     public Adapter(ArrayList<BankAccounts> accounts) {
-        this.accounts = new ArrayList<>(accounts);
+        this.accounts = accounts;
     }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder {

@@ -29,8 +29,11 @@ public class BankAccountsActivity extends AppCompatActivity {
         myLayoutManager = new LinearLayoutManager(this);
         myRecyclerView.setLayoutManager(myLayoutManager);
 
+
         myAdapter = new Adapter(accounts);
+        myAdapter.showAccounts();
         myRecyclerView.setAdapter(myAdapter);
+
 
     }
 
