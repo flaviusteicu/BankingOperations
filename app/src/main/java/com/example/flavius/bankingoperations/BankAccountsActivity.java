@@ -37,11 +37,11 @@ public class BankAccountsActivity extends AppCompatActivity {
     }
 
 
-    public void goToOperations(View view){
+    /*public void goToOperations(View view){
 
         Intent myIntent = new Intent(getApplicationContext(),BankingOperationsActivity.class);
         startActivity(myIntent);
 
-    }
+    }*/
 
 }

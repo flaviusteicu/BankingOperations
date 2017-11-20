@@ -3,13 +3,12 @@ package com.example.flavius.bankingoperations;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class BankingOperationsActivity extends AppCompatActivity {
 
-    int balanceAccoutnID = 11;
-    //int balanceAccoutnID = Login.currentUser.personID;
+
+    int balanceAccountID;
     TextView balance;
 
     @Override
@@ -23,9 +22,15 @@ public class BankingOperationsActivity extends AppCompatActivity {
 
     public void checkBalanceButton(View view){
 
-        BankingOperations checkingBalance = new BankingOperations();
-        double balanceToPrint = checkingBalance.checkBalance(balanceAccoutnID);
-        balance.setText(String.valueOf(balanceToPrint));
+        /*for(int i=0;i<Login.currentUser.bankAccountsIDs.size();i++){
+
+            if(Login.currentUser.bankAccountsIDs.get(i) == )
+
+        }*/
+
+       /* BankingOperations checkingBalance = new BankingOperations();
+        double balanceToPrint = checkingBalance.checkBalance(balanceAccountID);
+        balance.setText(String.valueOf(balanceToPrint));*/
 
     }
 
