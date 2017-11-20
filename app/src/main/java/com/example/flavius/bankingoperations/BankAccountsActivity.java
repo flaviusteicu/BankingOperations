@@ -34,7 +34,6 @@ public class BankAccountsActivity extends AppCompatActivity {
         myAdapter.showAccounts();
         myRecyclerView.setAdapter(myAdapter);
 
-
     }
 
 
