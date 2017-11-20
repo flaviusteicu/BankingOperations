@@ -7,12 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by Flavius on 20-Nov-17.
  */
 
 public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
 
+    ArrayList<BankAccounts> accounts;
+
+    public Adapter(ArrayList<BankAccounts> accounts) {
+        this.accounts = new ArrayList<>(accounts);
+    }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder {
 
@@ -23,6 +30,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
             cardOwner = itemView.findViewById(R.id.cardTextViewID);
         }
     }
+
+
+    public void showAccounts(){
+
+        for(int i = 0;i<DatabaseProvider.listOfBankAccounts.size();i++){
+
+            BankAccounts accountsOwner = DatabaseProvider.listOfBankAccounts.get(i);
+
+            if( accountsOwner.bankAccountID == Login.currentUser.personID ) {
+
+                accounts.add(DatabaseProvider.listOfBankAccounts.get(i));
+
+            }
+
+        }
+
+    }
+
 
     @Override
     public Adapter.CardViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -41,7 +66,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return accounts.size();
     }
 
 

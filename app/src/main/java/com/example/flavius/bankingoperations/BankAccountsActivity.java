@@ -29,25 +29,11 @@ public class BankAccountsActivity extends AppCompatActivity {
         myLayoutManager = new LinearLayoutManager(this);
         myRecyclerView.setLayoutManager(myLayoutManager);
 
-
-
-    }
-
-    public void showAccounts(){
-
-        for(int i = 0;i<DatabaseProvider.listOfBankAccounts.size();i++){
-
-            BankAccounts accountsOwner = DatabaseProvider.listOfBankAccounts.get(i);
-
-            if( accountsOwner.bankAccountID == Login.currentUser.personID ) {
-
-                
-
-            }
-
-        }
+        myAdapter = new Adapter(accounts);
+        myRecyclerView.setAdapter(myAdapter);
 
     }
+
 
     public void goToOperations(View view){
 
