@@ -71,6 +71,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
+
                 Intent myIntent = new Intent(context, BankingOperationsActivity.class);
                 //myIntent.putExtra("Account ID",);
                 context.startActivity(myIntent);
