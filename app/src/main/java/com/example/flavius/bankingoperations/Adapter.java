@@ -65,6 +65,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
     }
 
     @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    @Override
     public int getItemCount() {
         return accounts.size();
     }
