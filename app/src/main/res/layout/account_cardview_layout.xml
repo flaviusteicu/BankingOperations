@@ -13,10 +13,7 @@
         android:layout_width="350dp"
         android:layout_height="180dp"
         android:layout_gravity="center"
-        android:descendantFocusability="blocksDescendants"
-        android:focusableInTouchMode="true"
-        android:clickable="true"
-        android:focusable="true"
+        android:clickable="false"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -27,10 +24,7 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:descendantFocusability="blocksDescendants"
-            android:focusableInTouchMode="true"
-            android:clickable="true"
-            android:focusable="true">
+            android:clickable="false">
 
             <TextView
                 android:id="@+id/textViewAccountID"

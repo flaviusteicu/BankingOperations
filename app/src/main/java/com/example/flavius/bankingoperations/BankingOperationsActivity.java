@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class BankingOperationsActivity extends AppCompatActivity {
 
 
-    int balanceAccountID;
+    String balanceAccountID;
     TextView balance;
 
     @Override
@@ -21,6 +21,10 @@ public class BankingOperationsActivity extends AppCompatActivity {
     }
 
     public void checkBalanceButton(View view){
+
+
+        balanceAccountID = getIntent().getStringExtra("Account ID");
+        balance.setText(String.valueOf(balanceAccountID));
 
         /*for(int i=0;i<Login.currentUser.bankAccountsIDs.size();i++){
 

@@ -61,7 +61,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
 
 
     @Override
-    public Adapter.CardViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
+    public Adapter.CardViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
 
         final View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.account_cardview_layout, parent, false);
         final CardViewHolder myViewHolder = new CardViewHolder(itemView);
@@ -72,6 +72,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.CardViewHolder> {
             public void onClick(View view) {
                 Context context = view.getContext();
                 Intent myIntent = new Intent(context, BankingOperationsActivity.class);
+                //myIntent.putExtra("Account ID",);
                 context.startActivity(myIntent);
             }
         });

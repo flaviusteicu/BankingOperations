@@ -1,12 +1,11 @@
 package com.example.flavius.bankingoperations;
 
-import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.TextView;
+
 
 import java.util.ArrayList;
 
@@ -36,12 +35,5 @@ public class BankAccountsActivity extends AppCompatActivity {
 
     }
 
-
-    /*public void goToOperations(View view){
-
-        Intent myIntent = new Intent(getApplicationContext(),BankingOperationsActivity.class);
-        startActivity(myIntent);
-
-    }*/
 
 }
